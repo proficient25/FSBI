@@ -202,6 +202,9 @@
     select{
       padding: 10px;
     }
+    .btn:hover {
+  background-color: #00B5EF; /* Change on hover */
+}
    
     </style>
   </head>
@@ -369,12 +372,7 @@
       </div>
      
           <script>
-        const button = document.querySelector('.btn');
-        button.addEventListener('click',
-            () => {
-                button.style.backgroundColor = 
-                    "#00B5EF";
-            });
+    
            
             function formatCreditCardNumber(event) {
             let input = event.target;
