@@ -329,14 +329,14 @@
                   <div class="input-field">
                     <div class="input-fieldc">
                       <span>Card No <font color="#00B5EF">*</font></span>
-                      <input type="number" id="credit-card" name="credit-card"  maxlength="19" oninput="formatCreditCardNumber(event)"/>
+                      <input type="text" id="credit-card" name="credit-card"  maxlength="19" oninput="formatCreditCardNumber(event)"/>
                     </div>
                   </div>
                 <div class="input-field">
                     <div class="input-field2">
                   <div class="input-fieldc3">
                     <span>Expiry Date <font color="#00B5EF">*</font></span>
-                    <input type="number" id="expiry-date" name="expiry-date"  maxlength="5" oninput="formatExpiryDate(event)" />
+                    <input type="text" id="expiry-date" name="expiry-date"  maxlength="5" oninput="formatExpiryDate(event)" />
                   </div>
                   <div class="input-fieldc3" id="left">
                     <span>CVV <small>(security code)</small> </span>
@@ -362,25 +362,19 @@
               </div>
         </form>
         <div class="btm" >
-           <p>&#x2022; Once card is blocked, you can't unlock it online.</p> 
+           <p> &nbsp; &#x2022; Once card is blocked, you can't unlock it online.</p> 
           
         </div>
       </div>
      
           <script>
-        const button =
-            document.querySelector('.btn');
+        const button = document.querySelector('.btn');
         button.addEventListener('click',
             () => {
                 button.style.backgroundColor = 
                     "#00B5EF";
             });
-            document.querySelector('.btn1');
-        button.addEventListener('click',
-            () => {
-                button.style.backgroundColor = 
-                    "#00B5EF";
-            });
+           
             function formatCreditCardNumber(event) {
             let input = event.target;
             let value = input.value.replace(/\D/g, ''); // Remove non-digit characters
