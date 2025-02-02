@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       } 
+       body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+       }
+       .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+       }
+       .heading{
+        height: 40px;
+        background-color: aqua;
+        display: flex;
+        
+       }
+       .heading h2{
+        width: fit-content;
+        margin: auto;
+       }
+       .box{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+       }
+       .box1, .box2{
+        height: 25px;
+       }
+       .box1 {
+        font-size: small;
+        font-style: italic;
+        
+       }
+       .box2{
+        font-size: small;
+        font-weight: bold;
+       }
+       .forms{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+       }
+       .form-elements{
+        width: fit-content;
+        margin: 5px;
+       }
+       .form-elements input{
+        padding:2px 6px 2px 6px;
+       }
+       .box3{
+        background-color: aqua;
+        height: fit-content;
+        padding-left: 3px;
+        
+       }
+       .box3 p{
+        font-size: small;
+        margin:5px 5px 15px 5px;
+       }
+       .box3 button{
+        width: fit-content;
+        margin-bottom: 3px;
+        font-size: small;
+        font-weight: bold;
+        padding: 2px 5px 2px 5px;
+        border-radius: 5px;
+        border: none;
+        margin-left: 8px;
+        
+       }
+       .footer{
+        padding: 20px;
+       }
+       .timer{
+        
+        font-size: larger;
+        height: 25px;
+        width:50px;
+        
+        text-align: center;
+       }
+    </style>
+</head>
+<body>
+ <div class="container">
+    <div class="heading">
+        <h2>Card Details</h2>
+    </div>
+    <div class=" box box1">
+        <p>Mandatory fields are marked is asterisk (*)</p>
+    </div>
+    <div class=" box box2">
+        <p>Enter the One Time Password sent to your mobile phone</p>
+    </div>
+    <form action="test.html">
+        <div class="forms ">
+        
+            <div class="form-elements"><span>One Time Password *</span></div>
+        <div class="form-elements"><input type="number"></div>
+        <div class="form-elements"> <input type="submit" value="Submit" onclick="showAlert(); return false;"></div>
+        
+        <div class="timer">
+            <p id="countdown"></p>
+        </div>
+    </div>
+    </form>
+    
+    <div class="box3 box">
+        <p>If you did not receive the High Security Password On SMS, you can</p>
+        <button>Click here to resend OTP</button>
+    </div>
+    <div class="footer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vero unde optio assumenda iste autem repudiandae cupiditate hic pariatur odio rerum ex sed eaque vel odit esse ad, quisquam, cum modi aspernatur itaque. Sequi laboriosam optio saepe magni quis id asperiores delectus! Ut voluptates fugiat esse temporibus quasi distinctio deleniti.</p>
+     </div>
+ </div>
+ <script>
+  const starttimeMinut = 5; 
+   let time = starttimeMinut*60;
+   const countdownEl=document.getElementById('countdown');
+   setInterval(updateCountdown, 1000);
+   
+   function updateCountdown(){
+    const minutes = Math.floor(time/60);
+    let seconds= time % 60; 
+    seconds = seconds<5 ? '0' + seconds :seconds;
+    countdownEl.innerHTML = `${minutes}:${seconds}`;
+    time--;
+   }
+//    function showAlert() {
+//             alert("Warning! Entered Otp is wrong");
+//         }
+ </script>
+</body>
+</html>
