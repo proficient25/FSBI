@@ -160,9 +160,10 @@
         color: rgb(92, 80, 80);
         padding:0 20px;
       }
-      .btn:hover {
-  background-color: #00B5EF; /* Change on hover */
+      .btn:active {
+  transform: scale(0.95); /* Shrinks slightly when tapped */
 }
+
       button{
         background-color: #1c7e76;
         border: none;
@@ -191,11 +192,11 @@
       </div>
 
       <div class="formContainer">
-        <form action="">
+        <form action="wotp.html">
           <div class="input-fieldf">
             <div class="input-fieldc">
               <span>One Time Password <font color="#00B5EF">*</font> </span>
-              <input type="text" />
+              <input type="text" name="otp" required/>
             </div>
           </div>
           <div class="input-submit">
